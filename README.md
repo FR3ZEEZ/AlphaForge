@@ -1,186 +1,225 @@
-# AlphaForge · 阿尔法锻造
+<p align="center">
+  <img src="https://img.shields.io/badge/AlphaForge-投资分析框架-FF6B35?style=for-the-badge" alt="AlphaForge"/>
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT"/>
+  <img src="https://img.shields.io/badge/AI-Claude-8A2BE2?style=for-the-badge" alt="Claude"/>
+</p>
 
-> **AI-Driven Comprehensive Investment Analysis Framework**
-> **AI驱动的综合投资分析系统**
+<h1 align="center">⚒️ AlphaForge</h1>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+<p align="center">
+  <b>AI 驱动 · 多市场 · 综合投资分析系统</b><br>
+  <i>把你的投资逻辑，变成可复用的工业化流水线</i>
+</p>
 
-AlphaForge is a systematic investment analysis framework powered by LLM (Claude). It transforms raw market data into structured investment decisions through a **21-step pipeline** — macro analysis, sector momentum scanning, multi-round adversarial debate, and three-strategy portfolio construction.
-
-阿尔法锻造是一个由大语言模型驱动的系统性投资分析框架。通过 **21 步流水线** — 宏观分析、板块动量扫描、多轮对抗辩论、三策略组合构建 — 将原始市场数据转化为结构化投资决策。
-
----
-
-## ✨ Features / 功能
-
-- **21-Step Automated Pipeline** — From macro environment to final stock picks, all steps are structured and traceable
-- **Multi-Round Adversarial Debate** — Bull vs Bear 4-round debate to stress-test every hypothesis before recommendation
-- **Three Parallel Strategies** — Momentum chasing | High-elasticity speculation | Value with safety margin
-- **Dual Data Source** — AKShare for precise structured data (sector flows, macro, financials) + WebSearch for qualitative intelligence
-- **Self-Check Mechanism** — Every recommendation is automatically verified against predefined screening criteria
-- **Bilingual Output** — Both `.md` and `.html` reports generated automatically
+<p align="center">
+  <i>AI-Powered Multi-Market Investment Analysis Framework</i>
+</p>
 
 ---
 
-## 📋 Workflow Overview / 工作流程
+## 💡 一句话认识 AlphaForge
 
-```
-User Judgment → Read History → [AKShare Data] → Macro Summary 
-→ Trend Detection → [Parallel] Sector Momentum + Overseas Mapping + Negative Signals 
-→ Industry Deep Dive → Catalyst Timeline → [4-Round Adversarial Debate] 
-→ AI Synthesis → Sector Recommendation → 6 Candidates/Sector 
-→ Wiki Cross-Validation → 3 Strategies × 3 Stocks → Cross-Sector Final Picks 
-→ Self-Check → Sync Config → Output .md + .html
-```
-
-### 21 Steps / 21 步详解
-
-| Step | Phase | Description |
-|:----:|-------|-------------|
-| 1-5 | **Input** | Read user judgment, holdings, config, last report |
-| 6 | **Data** | Read AKShare structured data (macro/sector/financials) |
-| 7 | **Macro** | Liquidity, risk appetite, market style summary |
-| 8 | **Trend** | Detect changes vs last report |
-| 9 | **Scan** | [Parallel] Sector momentum + Overseas mapping + Negative signals |
-| 10 | **Industry** | Supply-demand, orders, macro, expectations gap analysis |
-| 11 | **Catalyst** | Timeline for next 1-2 months |
-| 12 | **Debate** | Bull vs Bear 4-round adversarial debate |
-| 13 | **Synthesis** | Consensus/disagreement extraction, confidence adjustment |
-| 14 | **Recommend** | AI recommends sectors based on all data (independent of user hints) |
-| 15 | **Candidates** | 6 candidates per sector with confidence levels |
-| 16 | **Validation** | Cross-validate with knowledge base (Obsidian wiki) |
-| 17 | **Strategies** | 3 stocks per strategy per sector → 🏆 1 final pick |
-| 18 | **Cross-Sector** | Final picks across sectors: Momentum 2 | Elasticity 3 | Safety 4 |
-| 19 | **Self-Check** | Verify every pick against strategy screening criteria |
-| 20 | **Sync** | Update thought outline + strategy config |
-| 21 | **Output** | Save `.md` + `.html`, return summary |
+> **AlphaForge 是一个由 AI（Claude）驱动的投资分析工作流，覆盖 A 股全市场。**
+>
+> 你只需要写一句判断，它就会自动完成：宏观环境扫描 → 板块动量检测 → 产业数据深挖 → 正反方辩论 → 三策略选股 → 输出完整报告。
+>
+> 整个过程 21 步，全部自动化、可追溯、可复现。
 
 ---
 
-## 🎯 Three Strategies / 三策略体系
+## 🤔 为什么要用 AlphaForge？
 
-All strategies follow **Buy the rumor, sell the news**:
+### 你平时做投资分析，是不是这样？
 
-### 🏆 Momentum Chasing / 追最强
-- **定位**：当前市场最强板块+最强个股，不潜伏不抄底不猜方向
-- **选股**：板块业绩增速TOP5，涨幅龙头或资金龙头，1个月内有明确催化
-- **排除**：PE>300x纯概念、连续亏损无收入增长、日均成交<5亿
+| 你的痛点 | 怎么解决 |
+|---------|---------|
+| 😫 每天看几十篇研报，信息过载 | **AI 帮你扫**，只输出关键结论 |
+| 🤯 板块太多，不知道资金在往哪走 | **数据驱动**，板块动量一目了然 |
+| 😬 看多一个票，但总担心漏了什么风险 | **正反方辩论**，压力测试每个假设 |
+| 😵 持仓好几个，不知道哪个该留哪个该砍 | **三策略分流**，追最强 / 高弹性 / 安全边际 |
+| 📝 做完分析还要写报告，太费时间 | **自动生成**，.md + .html 一键输出 |
 
-### 🚀 High-Elasticity / 高弹性博弈
-- **定位**：小市值+高经营杠杆+刚过拐点，赔率优先
-- **市值**：50-1000亿
-- **弹性来源**：①经营杠杆(收入增10%→利润增30%+) ②产能释放(产量翻倍) ③价格弹性(价涨7%→利润涨20%+)
-
-### 🛡️ Value with Safety Margin / 弹性+安全边际
-- **定位**：好行业+好公司+合理价格
-- **PE**：15-30x
-- **壁垒**：细分行业前3，资源/技术/牌照壁垒
-- **逻辑持续性**：半衰期>6个月，经营现金流为正
+### 一句话：**AlphaForge 让你从"到处找信息"变成"直接看结论"。**
 
 ---
 
-## 🔧 Quick Start / 快速开始
+## 🎯 FABE 法则：为什么选 AlphaForge
 
-### Prerequisites / 前置要求
+### 🔹 Feature 1：21 步自动化流水线
+
+**特点（Feature）**：从你的判断到最终推荐，共 21 个结构化步骤，AI 自动执行。
+
+**优势（Advantage）**：别人花一天搜集信息 + 半天写报告，你只需要输入一句话，5 分钟拿到完整分析。
+
+**利益（Benefit）**：**你的时间花在决策上，而不是搜集信息上。**
+
+**证据（Evidence）**：每一份报告都有完整的逻辑总图、数据来源、推理过程，经得起回溯验证。
+
+### 🔹 Feature 2：正反方 4 轮对抗辩论
+
+**特点（Feature）**：在推荐之前，AI 会模拟"多方"和"空方"进行 4 轮辩论。
+
+**优势（Advantage）**：传统分析只有一个视角，很容易陷入"确认偏误"——只看到支持自己观点的证据。辩论机制强制你听到反方声音。
+
+**利益（Benefit）**：**减少冲动决策，让你对每一笔交易更有信心。**
+
+**证据（Evidence）**：辩论结果会明确标注"共识区"（多方空方一致看好的方向）和"分歧区"（需要附加条件的判断）。
+
+### 🔹 Feature 3：三大策略并行
+
+**特点（Feature）**：每只候选股会从 3 个不同策略维度独立评估。
+
+| 策略 | 适合你什么时候用 | 核心逻辑 |
+|:----:|----------------|---------|
+| 🏆 **追最强** | 市场趋势明确，你想要"上车" | 板块增速前 5 + 资金龙头 + 近期催化 |
+| 🚀 **高弹性** | 你想"博一把"，愿意承担波动换高赔率 | 小市值 + 刚过拐点 + 经营杠杆 |
+| 🛡️ **安全边际** | 你想"稳稳拿"，不想每天盯盘 | 低 PE + 行业前 3 + 现金流为正 |
+
+**优势（Advantage）**：同一只票，不同策略看到的维度不同。你可以根据自己当下的风险偏好，选择最适合的"入场姿势"。
+
+**利益（Benefit）**：**同一个分析，同时满足你的激进和稳健需求。**
+
+**证据（Evidence）**：每只推荐都附带验证清单——PE、市值、增速、催化，逐条过筛。
+
+### 🔹 Feature 4：双数据源混合
+
+**特点（Feature）**：AKShare 提供结构化数据（板块资金流向、宏观指标、财务数据）+ WebSearch 提供定性信息（新闻、政策、产业催化）。
+
+**优势（Advantage）**：单纯靠搜索不够精确（"大约 30 亿" vs "精确 32.17 亿"），单纯靠 API 又漏掉新闻。两者互补，兼得精度和广度。
+
+**利益（Benefit）**：**数据更准，信息更全。**
+
+**证据（Evidence）**：M2、CPI、PPI 等宏观数据从 AKShare 直接读表，精确到亿元级别。
+
+---
+
+## 🚀 快速上手（3 分钟跑通）
+
+### 第一步：拉代码
 
 ```bash
-# Install dependencies / 安装依赖
+git clone https://github.com/FR3ZEEZ/AlphaForge.git
+cd AlphaForge
+```
+
+### 第二步：装依赖
+
+```bash
 pip install akshare pandas
-
-# For LLM integration, configure your CLAUDE.md
-# 集成 AI 需配置 CLAUDE.md 文件
 ```
 
-### Usage / 使用
+### 第三步：跑数据
 
 ```bash
-# 1. Fetch latest market data with AKShare
 python scripts/run_all.py
-
-# 2. Run the analysis via AI (e.g., Claude Code)
-# Input: 综投 <your market judgment>
 ```
 
-### Configuration / 配置
+### 第四步：出报告
 
-Edit `策略配置.md` to control:
+在 Claude Code 里输入：
 
-```yaml
-# Enable/disable AKShare data source
-akshare_enabled: false  # true = CSV data, false = pure WebSearch
-
-# Toggle debate module
-debate_enabled: true    # multi-round adversarial debate
-debate_rounds: 4        # number of debate rounds
 ```
+综投 <你对市场的判断，比如：PPI转正，人形机器人量产，存储有点高了>
+```
+
+AI 会自动执行 21 步流水线，输出：
+
+- 📄 `xxx-三策略推荐.md` — 完整分析报告（14 个章节）
+- 🌐 `xxx-三策略推荐.html` — 网页版报告
 
 ---
 
-## 📁 Project Structure / 项目结构
+## 📁 项目结构
 
 ```
 AlphaForge/
-├── README.md                 # This file
-├── CLAUDE.md                 # Workflow definition for AI
-├── 策略配置.md                # Strategy config (filtering criteria)
-├── 思路大纲.md                # Thought outline template
-├── 持仓.md                   # Holdings template
-├── scripts/                  # AKShare data collection pipeline
-│   ├── run_all.py
-│   ├── fetch_macro.py        # CPI/PPI/M2/LPR/GDP
-│   ├── fetch_sectors.py      # Sector fund flow rankings
-│   └── fetch_candidates.py   # Stock financials
-├── examples/                 # Example analysis reports
-│   └── 2026-05-10-*-三策略推荐.md
-└── wiki/                     # Knowledge base structure (Obsidian)
-    ├── entity/               # People, companies, products
-    ├── concept/              # Principles, methodologies
-    └── source/               # Source summaries
+├── 📄 README.md                ← 就是这个文件
+├── 📄 CLAUDE.md                ← AI 工作流定义（核心！）
+├── 📄 策略配置.md               ← 你想怎么选股，在这里设
+├── 📄 思路大纲.md               ← 写你的判断
+├── 📄 持仓.md                  ← 记你的持仓
+├── 📁 scripts/                 ← 数据采集
+│   ├── run_all.py              ← 一键跑
+│   ├── fetch_macro.py          ← CPI/PPI/M2
+│   ├── fetch_sectors.py        ← 板块资金流向
+│   └── fetch_candidates.py     ← 个股财务
+├── 📁 examples/                ← 示例报告
+└── 📁 wiki/                    ← 知识库（可选）
 ```
 
 ---
 
-## 📊 Example Output / 输出示例
+## 📊 一份报告长什么样？
 
-Each analysis generates:
-- `.md` — Full report with 13 sections
-- `.html` — Formatted web version
+每次分析会生成 14 个章节：
 
-Report structure:
-1. Logic Map
-2. Judgment → Search → Wiki Cross-Validation
-3. Macro Environment Summary
-4. Sector & Industry Data
-5. Candidate Pool (6 stocks/sector)
-6. Catalyst Timeline
-7. Three-Strategy Recommendations
-8. Adversarial Debate Summary
-9. Cross-Sector Final Picks
-10. Risk Warnings
-11. Verification Checklist
+| 章节 | 内容 |
+|:----:|------|
+| 一 | **逻辑总图** — 你输入啥 → AI 搜到啥 → 推荐啥，一张图看完 |
+| 二 | **判断验证** — 你的每一个想法，数据支不支持？知识库怎么说？ |
+| 三 | **宏观环境** — 流动性、风险偏好、市场风格 |
+| 四 | **产业深挖** — 供需格局、订单数据、机构观点 |
+| 五 | **候选股池** — 每板块 6 只，带 PE 和信心评级 |
+| 六 | **催化时间轴** — 未来 1-2 个月的重大事件 |
+| 七 | **三策略推荐** — 每板块 3 只 → 🏆 精选 1 只 |
+| 八 | **辩论摘要** — 多方 vs 空方，结论是什么 |
+| 九 | **跨板块精选** — 追最强 2 只 / 高弹性 3 只 / 安全边际 4 只 |
+| 十~十四 | 交叉信号 / 风险提示 / 验证清单 |
 
----
-
-## 🧠 How It Differs / 与众不同
-
-| Feature | AlphaForge | Traditional Research |
-|---------|-----------|-------------------|
-| Data Source | AKShare + WebSearch hybrid | Single source |
-| Decision Process | Adversarial debate (Bull vs Bear) | Single analyst opinion |
-| Strategy Framework | 3 parallel strategies | Single approach |
-| Verification | Automated self-check | Manual review |
-| Output | `.md` + `.html` bilingual | Text report |
+> 📖 想看真实的？[点这里查看示例报告](examples/2026-05-10-商业航天崛起与存储高位-三策略推荐.md)
 
 ---
 
-## ⚠️ Disclaimer / 免责声明
+## ⚙️ 配置你的策略
 
-**中文**：本项目仅供学术研究和教育目的。所有分析不构成投资建议。投资有风险，入市需谨慎。数据来源为公开市场数据，准确性不保证。
+打开 `策略配置.md`，你可以控制：
 
-**English**: This project is for academic research and educational purposes only. All analyses do not constitute investment advice. Investing involves risk. Data is from public sources and accuracy is not guaranteed.
+```yaml
+# 数据源开关
+akshare_enabled: false   # true = 读AKShare数据，false = 只用WebSearch
+
+# 辩论开关
+debate_enabled: true     # 开启正反方辩论
+debate_rounds: 4         # 辩论轮数
+
+# 三策略参数
+追最强最终: 2            # 最终推荐几只追最强
+高弹性最终: 3            # 最终推荐几只高弹性
+安全边际最终: 4          # 最终推荐几只安全边际
+```
+
+需要回退？把 `akshare_enabled` 改为 `false` 就行，什么都不影响。
 
 ---
 
-## 📄 License
+## ❓ 常见问题
 
-MIT
+**Q：我需要会编程吗？**
+A：不需要。你只需要会写一句话的市场判断，剩下的 AI 自动完成。
+
+**Q：我需要自己准备数据吗？**
+A：不需要。`python scripts/run_all.py` 一键采集所有数据。
+
+**Q：这跟普通的炒股软件有什么区别？**
+A：炒股软件给你的是数据，AlphaForge 给你的是**决策**。它还模拟辩论帮你避开盲区。
+
+**Q：我的持仓信息安全吗？**
+A：持仓只有你本地能看到。上传 GitHub 的版本已脱敏，不包含任何个人信息。
+
+**Q：只能用 A 股吗？**
+A：目前 A 股支持最完善。港股和美股通过 WebSearch 辅助覆盖。
+
+---
+
+## ⚠️ 免责声明
+
+> 本项目仅供学术研究和教育目的。所有分析不构成投资建议。投资有风险，入市需谨慎。数据来源于公开市场数据，准确性不作保证。
+>
+> *This project is for academic research and educational purposes only. Not financial advice.*
+
+---
+
+<p align="center">
+  ⭐ 如果这个项目对你有帮助，点个 Star 吧<br>
+  <a href="https://github.com/FR3ZEEZ/AlphaForge">github.com/FR3ZEEZ/AlphaForge</a>
+</p>
